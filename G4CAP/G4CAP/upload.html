@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Files - G4Cap</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function showProgress(event) {
+            const progressBar = document.getElementById("progress-bar");
+            const percent = Math.round((event.loaded / event.total) * 100);
+            progressBar.style.width = percent + "%";
+            progressBar.innerText = percent + "%";
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="logo1.png" alt="G4Cap Logo">
+            </a>
+            <ul>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="upload.html">Upload</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Upload Files</h1>
+        <form action="upload_files.php" method="POST" enctype="multipart/form-data">
+            <label for="file">Select File:</label>
+            <input type="file" id="file" name="file" required>
+            
+            <div id="progress-container" style="width: 100%; background: #f3f3f3; border: 1px solid #ddd; margin: 10px 0; height: 25px; position: relative;">
+                <div id="progress-bar" style="width: 0; height: 100%; background: #4caf50; color: white; text-align: center; line-height: 25px; overflow: hidden;"></div>
+            </div>
+            
+            <button type="submit">Upload</button>
+        </form>
+    </main>
+</body>
+</html>
