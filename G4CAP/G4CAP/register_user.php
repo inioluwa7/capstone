@@ -1,9 +1,9 @@
 <?php
 // register_user.php
-$servername = "localhost"; // Replace with your Linux SQL Server details
-$username = "root";        // Replace with your SQL username
-$password = "";            // Replace with your SQL password
-$dbname = "g4cap";         // Replace with your database name
+$servername = "g4cap-sqlr"; // Replace with your Linux SQL Server details
+$username = "g4adm";        // Replace with your SQL username
+$password = "Secret55!";            // Replace with your SQL password
+$dbname = "g4capdb";         // Replace with your database name
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
